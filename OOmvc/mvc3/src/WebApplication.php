@@ -4,15 +4,17 @@ class WebApplication
 {
     public function run()
     {
-        //print 'Web app is running!';
+        $action = filter_input(INPUT_GET, 'action');
 
-        $this->indexAction();
-    }
-
-    private function indexAction()
-    {
-        $pageTitle = 'home';
-        include __DIR__ . '/../templates/home.php';
-        
+        $mainController = new MainController();
+        switch ($action){
+            case 'jokes':
+                $mainController->jokesAction();
+                break;
+            case 'index':
+            default:
+                $mainController->indexAction();
+                break;
+        }
     }
 }
