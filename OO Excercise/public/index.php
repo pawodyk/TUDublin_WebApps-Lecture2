@@ -8,9 +8,9 @@ use TUDublin\Person;
 $person1 = new Person();
 $person2 = new Person();
 
-$person1->name = "matt";
-$person2->name = "joelle";
+$person1->setName("matt");
+$person2->setName("joelle");
 
-print '<p>' . $person1;
-print '<p>' . $person2;
+print '<p> This person\'s name is ' . $person1->getName();
+print '<p> This person\'s name is ' . $person2->getName();
 
