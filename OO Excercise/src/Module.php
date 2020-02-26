@@ -1,8 +1,6 @@
 <?php
 
-
 namespace TUDublin;
-
 
 class Module
 {
@@ -40,6 +38,11 @@ class Module
     public function setModuleCode($moduleCode)
     {
         $this->moduleCode = $moduleCode;
+    }
+
+    public function __toString()
+    {
+        return "Module # $this->id \n-----------\ntitle = $this->title\ncode = $this->moduleCode";
     }
 
 }

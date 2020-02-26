@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "testserver" : "php -S 127.0.0.1:5050 -t ./public"
+    "testserver" : "php -S 127.0.0.1:5050 -t ./public",
+    "test" : "cd public && php index.php && cd .."
   },
   "autoload": {
     "psr-4": {
