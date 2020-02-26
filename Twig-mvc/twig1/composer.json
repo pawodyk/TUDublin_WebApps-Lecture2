@@ -6,5 +6,8 @@
     "psr-4": {
       "TUDublin\\" : "src"
     }
+  },
+  "require": {
+    "twig/twig": "^3.0"
   }
 }
