@@ -38,3 +38,19 @@ foreach ($mods as $m){
     print PHP_EOL . ' ================ ' . PHP_EOL;
     print $m;
 }
+
+
+$m1 = $modRepo->getOne(1);
+$m2 = $modRepo->getOne(100);
+
+$mods = [$m1, $m2];
+
+foreach ($mods as $m){
+    print PHP_EOL . PHP_EOL;
+    if (!is_null($m)){
+        print $m;
+    }
+    else {
+        print "*** Module not found **";
+    }
+}
