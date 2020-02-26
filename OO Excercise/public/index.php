@@ -27,8 +27,6 @@ $s2 = new Student(2, 'Joelle', 'Murphy', '321');
 
 $modRepo = new ModuleRepository();
 
-//var_dump($modRepo->getAll());
-
 $mods = $modRepo->getAll();
 
 print 'length of array = ' . sizeof($mods);
@@ -38,6 +36,7 @@ foreach ($mods as $m){
     print PHP_EOL . ' ================ ' . PHP_EOL;
     print $m;
 }
+
 
 
 $m1 = $modRepo->getOne(1);
