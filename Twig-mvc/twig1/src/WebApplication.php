@@ -3,12 +3,13 @@ namespace TUDublin;
 
 class WebApplication
 {
-
+    const PATH_TO_TEMPLATES = __DIR__ . '/../templates';
     private $mainController;
 
     public function __construct()
     {
-        $this->mainController = new MainController();
+        $twig = new \Twig\Environment(new \Twig\Loader\FilesystemLoader(self::PATH_TO_TEMPLATES));
+        $this->mainController = new MainController($twig);
     }
 
     public function run()
